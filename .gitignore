@@ -11,6 +11,7 @@
 *.sln.docstates
 Theory.docx
 aspnet-core-vuejs-applications
+package-lock.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
