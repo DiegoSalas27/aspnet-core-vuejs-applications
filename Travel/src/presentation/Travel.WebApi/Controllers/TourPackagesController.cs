@@ -10,9 +10,9 @@ namespace Travel.WebApi.Controllers {
     [ApiController]
     [Route("api/[controller]")]
     public class TourPackagesController : ControllerBase
-    {
+       {
 
-
+         
 
     }
 }
