@@ -1,7 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using Travel.Data.Contexts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddDbContext<TravelDbContext>(options =>
+   options.UseSqlite("Data Source=TravelTourDatabase.sqlite3"));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
