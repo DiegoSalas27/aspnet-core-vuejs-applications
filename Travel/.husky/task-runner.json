@@ -4,11 +4,12 @@
          "name": "dotnet-format",
          "group": "pre-commit",
          "command": "dotnet",
-         "args": [ "dotnet-format", "--include", "${staged}" ],
+         "args": [ "dotnet format", "--include", "${staged}" ],
          "include": [ "**/*.cs", "**/*.vb" ]
       },
       {
          "name": "Welcome",
+         "group": "pre-commit",
          "output": "always",
          "command": "bash",
          "args": ["-c", "echo Nice work! 🥂"],
