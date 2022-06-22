@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Travel.Domain.Entities
 {
@@ -16,6 +14,5 @@ namespace Travel.Domain.Entities
         public string City { get; set; }
         public string Country { get; set; }
         public string About { get; set; }
-
     }
 }
