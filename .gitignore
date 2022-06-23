@@ -398,3 +398,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/Travel/src/presentation/Travel.WebApi/TravelTourDatabase.sqlite3-wal
+/Travel/src/presentation/Travel.WebApi/TravelTourDatabase.sqlite3-shm
+/Travel/src/presentation/Travel.WebApi/TravelTourDatabase.sqlite3
+/Travel/package-lock.json
