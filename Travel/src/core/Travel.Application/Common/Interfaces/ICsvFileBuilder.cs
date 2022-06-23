@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Travel.Application.TourLists.Queries.ExportTours;
 
 namespace Travel.Application.Common.Interfaces
 {
