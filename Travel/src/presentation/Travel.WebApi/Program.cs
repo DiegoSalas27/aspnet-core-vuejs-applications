@@ -1,12 +1,21 @@
-using Microsoft.EntityFrameworkCore;
-using Travel.Data.Contexts;
+using Microsoft.AspNetCore.Mvc;
+using Travel.Application;
+using Travel.Data;
+using Travel.Shared;
+using Travel.WebApi.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<TravelDbContext>(options =>
-   options.UseSqlite("Data Source=TravelTourDatabase.sqlite3"));
+builder.Services.AddApplication();
+builder.Services.AddInfrastructureData();
+builder.Services.AddInfrastructureShared(builder.Configuration);
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
+builder.Services.AddControllersWithViews(options => options
+    .Filters.Add(new ApiExceptionFilter()));
+builder.Services.Configure<ApiBehaviorOptions>(options => options
+    .SuppressModelStateInvalidFilter = true);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
