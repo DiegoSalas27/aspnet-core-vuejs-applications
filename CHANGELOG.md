@@ -1,4 +1,18 @@
-# 0.1.0 (2022-06-23)
+# [0.2.0](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/compare/v0.1.0...v0.2.0) (2022-06-24)
+
+
+### Features
+
+* **api:** add ApiVersion annotation to ApiController ([4ff9472](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/4ff9472a463ac10ceb30f88bc706898cb08cdb9f))
+* **api:** add default swagger metadata of the API explorer ([f3ffaba](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/f3ffaba299d1248d1e2b2166797920f0fd0a86e5))
+* **api:** add Swagger config for Api versioning documentation ([af87dcd](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/af87dcd82cc7edcf18d67f326988bc660f739fa4))
+* **api:** add WeatherForeCast controller ([a813cb8](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/a813cb83229482377aebc7be7f3e23c5e1db98d2))
+* **api:** add WeatherForeCastController v2 with breaking change ([e257173](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/e2571734cdc83071083453a9ecaeaf3ef2b6f7ee))
+* **api:** update Program.cs to support api versioning documentation with Swagger ([7f54b3d](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/7f54b3d6c98c25710272d36edfd0bfb5fddb9c5f))
+
+
+
+# [0.1.0](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/compare/b49bfef944ed28cd03af7e752e6251fe56e218a3...v0.1.0) (2022-06-23)
 
 
 ### Bug Fixes
