@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/compare/v0.2.0...v0.3.0) (2022-06-24)
+
+
+### Features
+
+* **api:** add Serilog package to use as default Logger ([87f362a](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/87f362aaa5ff2e628522fbb2e0addda3f154de49))
+
+
+
 # [0.2.0](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/compare/v0.1.0...v0.2.0) (2022-06-24)
 
 
