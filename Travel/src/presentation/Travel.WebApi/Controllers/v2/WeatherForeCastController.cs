@@ -19,8 +19,9 @@ namespace Travel.WebApi.Controllers.v2
             _logger = logger;
         }
 
+        // Not best practice to use a query parameter with post request
         [HttpPost]
-        public IEnumerable<WeatherForecast> Post(string city) // breaking change (see get method in v1)
+        public IEnumerable<WeatherForecast> Post(string city) // breaking change (see get method in v1) 
         {
 
             var rng = new Random();
