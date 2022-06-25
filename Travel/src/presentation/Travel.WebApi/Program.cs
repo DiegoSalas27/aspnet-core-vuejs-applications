@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
 using Serilog.Exceptions;
@@ -10,6 +10,8 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using Travel.Application;
 using Travel.Data;
+using Travel.Identity;
+using Travel.Identity.Helpers;
 using Travel.Shared;
 using Travel.WebApi.Filters;
 using Travel.WebApi.Helpers;
@@ -45,6 +47,7 @@ try
     builder.Services.AddApplication();
     builder.Services.AddInfrastructureData();
     builder.Services.AddInfrastructureShared(builder.Configuration);
+    builder.Services.AddInfrastructureIdentity(builder.Configuration);
     builder.Services.AddHttpContextAccessor();
     builder.Services.AddControllers();
     builder.Services.AddControllersWithViews(options => options
@@ -53,7 +56,31 @@ try
         .SuppressModelStateInvalidFilter = true);
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen(c => { c.OperationFilter<SwaggerDefaultValues>(); });
+    builder.Services.AddSwaggerGen(c =>
+    {
+        c.OperationFilter<SwaggerDefaultValues>();
+        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        {
+            Description = "JWT Authorization header using the Bearer scheme.",
+            Name = "Authorization",
+            In = ParameterLocation.Header,
+            Type = SecuritySchemeType.Http,
+            Scheme = "bearer"
+        });
+        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
+            {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            }, new List<string>()
+        }
+        });
+    });
     builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
     builder.Services.AddApiVersioning(config =>
     {
@@ -87,6 +114,8 @@ try
     }
 
     app.UseHttpsRedirection();
+
+    app.UseMiddleware<JwtMiddleware>();
 
     app.UseAuthorization();
 
