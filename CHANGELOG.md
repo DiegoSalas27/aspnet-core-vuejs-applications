@@ -1,3 +1,28 @@
+# [0.4.0](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/compare/v0.3.0...v0.4.0) (2022-06-25)
+
+
+### Bug Fixes
+
+* **Infra:** delete reference to Travel.WebApi project ([6a85b10](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/6a85b10d87261d0f92c2339020d670767ccbdba9))
+
+
+### Features
+
+* **api:** add customized Authorize middleware to base controller ([c9ffe28](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/c9ffe28ab439340481206eb335e521860060215d))
+* **api:** add UsersController ([6dc0113](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/6dc01132048ef49aed88c1d4a60edf2e53b4fef1))
+* **core:** add AuthenticateRequest for login required fields ([fa989fe](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/fa989fe7be474f287fc75166f5acaea2fdba0a9a))
+* **core:** add AuthenticateResponse for successful login ([600815c](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/600815c0e07ef58d6228a09d909994cfe1331ca6))
+* **core:** add IUserService contract ([48db4ad](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/48db4ad4c548d77373f1575f25ff82bfee4e4550))
+* **core:** add User class ([d4102bc](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/d4102bc19f88661a19799900a478f805b964a066))
+* **infra:** add custom attribute to Authorize classes and methods ([0377394](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/03773947570e16f779a1402ae582c9b5b512c011))
+* **infra:** add DepdendencyInjection file for register Travel.Identity config and services ([8e77744](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/8e77744ce765159bc747c985d0f50a459e6daca9))
+* **infra:** add JwtMiddleware to add user to HttpContext ([1645354](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/1645354327ba2710dbf85c79b59e6d90de3861b8))
+* **infra:** add secret configuration file ([e17c99d](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/e17c99d3b99401cab2d18a72f08226d3cb9c998c))
+* **infra:** add UserService implementation with Authenticate and JwtToken generation ([fa0c412](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/fa0c41231e81f1d7e4ef766177d624d1f9702db7))
+* **presentation:** add InfrastructureIdentity services, and updated SwaggerGen config ([f498861](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/commit/f4988617ac4bedded30d96b2ed1d0d6f60d815c5))
+
+
+
 # [0.3.0](https://github.com/DiegoSalas27/aspnet-core-vuejs-applications/compare/v0.2.0...v0.3.0) (2022-06-24)
 
 
